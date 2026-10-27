@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python Essentials — A Young Programmer's Journey</title>
+<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Reading progress bar -->
+<div class="reading-progress"><div class="reading-progress-fill"></div></div>
+<div class="page-indicator">Page 1</div>
+<div class="page-hint">← → arrow keys to turn pages</div>
+
+<!-- ============================================================
+     FRONT COVER
+     ============================================================ -->
+<section class="book-page cover-page active" id="cover">
+  <div class="cover-content">
+    <p class="cover-series">A Young Programmer's Journey</p>
+    <h1>Python Essentials</h1>
+    <p class="cover-subtitle">An illustrated adventure through the language of data, the web, and AI</p>
+    <p class="cover-author">Refactored for ages 5–13</p>
+    <div class="cover-note">
+      Three parts. Three ages. One language.<br>
+      Begin as an Adventurer. Grow into an Explorer. Rise as a Master.
+    </div>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin the Journey →</button>
+    </div>
+    <div class="cover-credit">
+      Adapted &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<section class="book-page toc-page" id="toc">
+  <div class="chapter-header">
+    <p class="chapter-part">Contents</p>
+    <h2>What Lies Ahead</h2>
+    <p class="chapter-tagline">Every great journey starts with a map.</p>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part One · Adventurers</h3>
+    <ol>
+      <li><a href="#ch-starting">Starting with Python</a></li>
+      <li><a href="#ch-interactive">Interactive Mode and Getting Help</a></li>
+      <li><a href="#ch-elements">Python Elements and Syntax</a></li>
+      <li><a href="#ch-first-app">Building Your First Python App</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Two · Explorers</h3>
+    <ol start="5">
+      <li><a href="#ch-numbers">Numbers, Text, and Dates</a></li>
+      <li><a href="#ch-control">Controlling the Action</a></li>
+      <li><a href="#ch-collections">Lists, Tuples, and Sets</a></li>
+      <li><a href="#ch-functions">Wrangling Bigger Chunks of Code</a></li>
+      <li><a href="#ch-errors">Sidestepping Errors</a></li>
+      <li><a href="#ch-files">Working with External Files</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Three · Masters</h3>
+    <ol start="11">
+      <li><a href="#ch-json">Juggling JSON Data</a></li>
+      <li><a href="#ch-internet">Interacting with the Internet</a></li>
+      <li><a href="#ch-libraries">Libraries, Packages, and Modules</a></li>
+      <li><a href="#ch-essential">The Ten Most Essential Aspects of Python</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>After the Journey</h3>
+    <ol start="15">
+      <li><a href="#glossary">The Little Dictionary</a></li>
+      <li><a href="#back">A Note for the Grown-Ups</a></li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Back to Cover</button>
+    <button class="nav-button" data-nav="next">Begin Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section class="book-page chapter-page" id="intro">
+  <div class="chapter-header">
+    <p class="chapter-part">Welcome</p>
+    <h2>Hello, Future Programmer</h2>
+    <p class="chapter-tagline">Every wizard starts as an apprentice.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Somewhere near you is a machine that can count faster than you can blink, remember more words than you will ever read, and follow instructions with perfect patience. That machine is a <em>computer</em>. But it is also a very silly machine. It can do almost nothing on its own. It needs you to tell it exactly what to do — one tiny step at a time.</p>
+
+    <p>Those tiny steps are called <strong>code</strong>. And the person who writes them is called a <strong>programmer</strong>. That, very soon, will be you.</p>
+
+    <p>This book is a journey in three parts:</p>
+
+    <ul>
+      <li><strong>Part One — Adventurers.</strong> You will meet Python, set up your tools, and learn your first words. Perfect for ages five to eight.</li>
+      <li><strong>Part Two — Explorers.</strong> You will play with numbers and text, make decisions, loop around, build functions, handle errors, and work with files. Great for ages nine to eleven.</li>
+      <li><strong>Part Three — Masters.</strong> You will juggle JSON, talk to the internet, use libraries and modules, and meet the ten essential aspects of Python. For ages twelve and thirteen.</li>
+    </ul>
+
+    <p>You do not need a fancy setup to follow along. A computer, the free Python language, and a code editor will do. The examples in this book are little seeds. Plant them, water them, break them, fix them, and grow them into something of your own.</p>
+
+    <p>Ready? Let us begin.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Before You Go</h3>
+    <ul>
+      <li>A <strong>program</strong> is a set of instructions for a computer.</li>
+      <li><strong>Python</strong> is a language that is easy to read and used everywhere.</li>
+      <li>You do not have to be a genius. You have to be patient and curious.</li>
+      <li>Every programmer, every day, writes mistakes. That is how we learn.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Warm-Up Questions</h3>
+    <ol>
+      <li>What is one thing you wish a computer could do for you?</li>
+      <li>Can you think of three machines in your home that run some kind of code?</li>
+      <li>What does the word "instruction" mean to you?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Contents</button>
+    <button class="nav-button" data-nav="next">Enter Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART ONE DIVIDER — ADVENTURERS
+     ============================================================ -->
+<section class="book-page cover-page part-page" id="part-one">
+  <div class="cover-content">
+    <p class="part-number">Part One</p>
+    <h1>Adventurers</h1>
+    <p class="part-desc">The very first steps. Meet Python, set up your tools, and learn your first words.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Start Chapter One →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 1 — STARTING WITH PYTHON
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-starting">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter One</p>
+    <h2>Starting with Python</h2>
+    <p class="chapter-tagline">Why Python is hot, and how to set up your tools.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Python is one of the most popular programming languages in the world. It is used to build websites, to analyse data, to teach robots to move, and to train artificial intelligence. It got its name from a comedy troupe called Monty Python — not from a snake — so it has always had a playful spirit.</p>
+
+    <p>Why is Python so popular? Three reasons. It is <strong>easy to learn</strong>, because its code looks almost like plain English. Everything you need to learn and use Python is <strong>free</strong>. And it comes with a huge library of ready-made tools for science, data, and AI.</p>
+
+    <p>There are different versions of Python out there, just as there are different years of the same car. In this book we use <strong>Python 3.11 and higher</strong>. Do not worry about the tiny differences between versions — the basics are the same.</p>
+
+    <p>To write Python, you need two tools. A <strong>code editor</strong> is where you type your code — we recommend <strong>Visual Studio Code</strong>, or <strong>VS Code</strong> for short. And the <strong>Python interpreter</strong> is what runs your code. You can download Python for free from <code>python.org</code>, and VS Code for free from <code>code.visualstudio.com</code>. Follow the installer's suggested options and you will be ready in minutes.</p>
+
+    <p>Once VS Code is installed, add the <strong>Python extension</strong> from Microsoft. That gives you helpful hints as you type, and it lets you run your code with a single click.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Python is popular because it is easy to learn, free, and packed with useful tools.</li>
+      <li>We use Python 3.11 or higher in this book.</li>
+      <li>You need two tools: a <strong>code editor</strong> and the <strong>Python interpreter</strong>.</li>
+      <li>VS Code is a free, friendly editor that works on every platform.</li>
+      <li>Install the Python extension in VS Code to make learning easier.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Download Python and VS Code. Ask a grown-up to help if you need to.</li>
+      <li>Open VS Code and install the Python extension.</li>
+      <li>What does a code editor do? What does an interpreter do?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part One</button>
+    <button class="nav-button" data-nav="next">Chapter Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 2 — INTERACTIVE MODE AND GETTING HELP
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-interactive">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Two</p>
+    <h2>Interactive Mode and Getting Help</h2>
+    <p class="chapter-tagline">Talking to Python, one line at a time.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>One of the fastest ways to try a Python idea is the <strong>interactive mode</strong>. In VS Code, open the Terminal pane (choose View → Terminal). Type <code>python</code> and press Enter. If your computer asks for something else, try <code>py</code> on Windows or <code>python3</code> on a Mac. You will know it worked when you see three greater-than signs: <code>&gt;&gt;&gt;</code>.</p>
+
+    <p>That is the Python prompt. Anything you type from here will be read and run immediately. Try a small sum:</p>
+
+    <pre class="code-example"><code>&gt;&gt;&gt; 2 + 3
+5
+&gt;&gt;&gt; "Hello, " + "world!"
+'Hello, world!'</code></pre>
+
+    <p>If you make a mistake, Python will tell you. Type a word Python does not recognise, like <code>howdy</code>, and it will answer with an error. That is not a disaster — it is just Python saying, "I don't know that word." You can try again right away.</p>
+
+    <p>Python also has a built-in help system. Type <code>help()</code> and press Enter to enter the help area. From there you can type the name of a topic — for example <code>keywords</code> to see all the reserved words in Python. When you are done, type <code>quit</code> to leave help, and <code>exit()</code> to leave the Python prompt altogether.</p>
+
+    <pre class="code-example"><code>&gt;&gt;&gt; help()
+help&gt; keywords
+help&gt; quit
+&gt;&gt;&gt; exit()</code></pre>
+
+    <p>For anything more complicated, the web is your friend. Search for <em>python</em> followed by the topic — for example <em>python print f string</em>. Sites like Stack Overflow and the official Python documentation are full of examples. And if you get stuck, ask a grown-up or an AI helper to explain.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The <strong>interactive mode</strong> runs Python code one line at a time.</li>
+      <li>The prompt looks like <code>&gt;&gt;&gt;</code>.</li>
+      <li>Errors are normal — read the message, try again.</li>
+      <li><code>help()</code> opens Python's built-in help; <code>exit()</code> leaves the interpreter.</li>
+      <li>Search the web with the word "python" first to get relevant results.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Open the Python prompt and calculate <code>12 * 12</code>.</li>
+      <li>Type <code>help()</code> and then <code>keywords</code> to see the reserved words.</li>
+      <li>Type <code>exit()</code> to leave the prompt and return to the terminal.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter One</button>
+    <button class="nav-button" data-nav="next">Chapter Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 3 — PYTHON ELEMENTS AND SYNTAX
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-elements">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Three</p>
+    <h2>Python Elements and Syntax</h2>
+    <p class="chapter-tagline">The Zen of Python, objects, indentations, and modules.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Python has a secret poem hidden inside it. It is called the <strong>Zen of Python</strong>, and you can read it by typing <code>import this</code> at the Python prompt. It goes like this:</p>
+
+    <pre class="code-example"><code>Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+...
+</code></pre>
+
+    <p>That little poem describes the whole philosophy of Python. The code you write should be <em>readable</em>. It should say what it means, clearly, so that any human can look at it and understand it.</p>
+
+    <p>Python is also an <strong>object-oriented</strong> language. That means it thinks in terms of <em>objects</em> — little bundles of data and actions. A number is an object. A string is an object. A list is an object. Each has its own properties and methods. Once you know how to drive one car, you can drive any car; once you understand one object, the rest make sense too.</p>
+
+    <p>One thing that makes Python special is its use of <strong>indentation</strong>. In many languages, blocks of code are wrapped in curly braces <code>{ }</code>. In Python, they are marked with spaces at the start of the line. That is why indentation <em>matters</em> in Python. It is not decoration — it is how the computer knows what belongs inside a loop, a function, or an <code>if</code> statement.</p>
+
+    <pre class="code-example"><code>answer = 3
+if answer == 3:
+    print("You may rely on it")
+    print("Ask again later")
+print("The end")</code></pre>
+
+    <p>Finally, Python has <strong>modules</strong>. A module is a collection of prewritten code that someone else has created and tested, and that you can borrow. To use a module, you <code>import</code> it:</p>
+
+    <pre class="code-example"><code>import random
+answer = random.randint(1, 8)
+print(answer)</code></pre>
+
+    <p>The <code>random</code> module knows how to pick a random number. The <code>math</code> module knows how to calculate square roots. The <code>datetime</code> module knows about dates. Modules are how Python grows without getting heavy.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The Zen of Python: readable, simple, explicit code.</li>
+      <li>Python is <strong>object-oriented</strong> — it deals in objects with properties and methods.</li>
+      <li>Indentation marks blocks of code. It is required, not optional.</li>
+      <li>Modules are prewritten code you can import and use.</li>
+      <li>Put <code>import</code> statements at the top of your file.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Type <code>import this</code> and read the whole Zen of Python.</li>
+      <li>Write a small <code>if</code> statement with an indented body. What happens if you remove the indentation?</li>
+      <li>Use <code>import random</code> to generate three random numbers.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Two</button>
+    <button class="nav-button" data-nav="next">Chapter Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 4 — BUILDING YOUR FIRST PYTHON APP
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-first-app">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Four</p>
+    <h2>Building Your First Python App</h2>
+    <p class="chapter-tagline">Comments, data types, operators, variables, and syntax.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Create a new file in VS Code and save it as <code>hello.py</code>. The <code>.py</code> at the end tells the computer that this is a Python file. Inside, type your first <strong>comment</strong>. A comment is a note for humans — the computer ignores it. Use <code>#</code> for a single-line comment, or wrap longer text in triple quotation marks.</p>
+
+    <pre class="code-example"><code># This is my first Python program.
+"""
+This is a longer comment,
+called a docstring.
+"""</code></pre>
+
+    <p>Now add some <strong>data</strong>. Python has three basic types you will use every day:</p>
+
+    <pre class="code-example"><code>quantity = 10          # integer (whole number)
+unit_price = 1.99      # float (decimal number)
+name = "Ada"           # string (text)
+ready = True           # boolean (True or False)</code></pre>
+
+    <p>Notice the <code>=</code> sign. It does not mean "equals" — it means "assign". The value on the right is stored in the variable on the left. That is why variables are sometimes called "name tags for values".</p>
+
+    <p>Variables follow a few simple rules. They must start with a letter or underscore. They can contain letters, numbers, and underscores. They are case-sensitive, so <code>myName</code> and <code>myname</code> are different. And they cannot be a Python keyword, like <code>if</code> or <code>for</code>.</p>
+
+    <p>Python can do arithmetic with <strong>operators</strong>: <code>+</code> for addition, <code>-</code> for subtraction, <code>*</code> for multiplication, <code>/</code> for division, and <code>%</code> for remainder. It can compare with <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>. And it can combine true-and-false questions with <code>and</code>, <code>or</code>, and <code>not</code>.</p>
+
+    <pre class="code-example"><code>extended_price = quantity * unit_price
+print(extended_price)
+# → 19.9</code></pre>
+
+    <p>Finally, remember that <strong>syntax matters</strong>. A line of code ends at the end of the line (or at a semicolon). Blocks of code are indented. Variable names are written in lowercase with underscores, like <code>first_name</code>. Follow the rules, and Python will happily do what you ask.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Comments start with <code>#</code> or are wrapped in triple quotes.</li>
+      <li>Basic data types: integer, float, string, boolean.</li>
+      <li>Variables are name tags for values, created with <code>=</code>.</li>
+      <li>Operators: <code>+ - * / %</code> for arithmetic, <code>== != &gt; &lt; &gt;= &lt;=</code> for comparison, <code>and or not</code> for logic.</li>
+      <li>Python is case-sensitive and depends on correct indentation.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create <code>hello.py</code> with a comment and a <code>print("Hello!")</code> line.</li>
+      <li>Make three variables: a number, a string, and a boolean.</li>
+      <li>Calculate the total cost of 14 items at $26.99 each.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Three</button>
+    <button class="nav-button" data-nav="next">Enter Part Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART TWO DIVIDER — EXPLORERS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-two" id="part-two">
+  <div class="cover-content">
+    <p class="part-number">Part Two</p>
+    <h1>Explorers</h1>
+    <p class="part-desc">You know the basics. Now it is time to roam — through numbers, decisions, loops, collections, functions, errors, and files.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Five →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 5 — NUMBERS, TEXT, AND DATES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-numbers">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Five</p>
+    <h2>Numbers, Text, and Dates</h2>
+    <p class="chapter-tagline">Mastering whole numbers, decimals, strings, and time.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Python can juggle numbers beautifully. Whole numbers are <strong>integers</strong>; numbers with a decimal point are <strong>floats</strong>. Python has built-in functions like <code>abs()</code> for absolute value, <code>round()</code> for rounding, <code>int()</code> for converting to whole numbers, and <code>float()</code> for converting to decimals. The <code>math</code> module adds even more, like <code>math.sqrt()</code> for square roots.</p>
+
+    <pre class="code-example"><code>import math
+print(abs(-4))           # → 4
+print(round(3.14))       # → 3
+print(math.sqrt(81))     # → 9.0</code></pre>
+
+    <p>When you show numbers to people, <strong>f-strings</strong> make them look nice. Put an <code>f</code> before a string, and use curly braces to insert an expression:</p>
+
+    <pre class="code-example"><code>quantity = 30
+unit_price = 49.99
+print(f"Subtotal: ${quantity * unit_price:,.2f}")
+# → Subtotal: $1,499.70</code></pre>
+
+    <p>Strings are just as friendly. You can <strong>concatenate</strong> them with <code>+</code>, find their length with <code>len()</code>, and use built-in methods like <code>.upper()</code>, <code>.lower()</code>, <code>.replace()</code>, <code>.split()</code>, and <code>.strip()</code>.</p>
+
+    <pre class="code-example"><code>first_name = "Ada"
+last_name = "Lovelace"
+full_name = first_name + " " + last_name
+print(full_name)          # → Ada Lovelace
+print(full_name.upper())  # → ADA LOVELACE
+print(len(full_name))     # → 12</code></pre>
+
+    <p>Dates and times live in the <code>datetime</code> module. You can get today's date with <code>dt.date.today()</code>, create any date with <code>dt.date(year, month, day)</code>, get the current date and time with <code>dt.datetime.now()</code>, and find the span between two dates by subtracting them.</p>
+
+    <pre class="code-example"><code>import datetime as dt
+
+today = dt.date.today()
+new_years_day = dt.date(2024, 1, 1)
+memorial_day = dt.date(2024, 5, 27)
+
+days_between = memorial_day - new_years_day
+print(days_between)   # → 147 days, 0:00:00</code></pre>
+
+    <p>With f-strings, you can format dates however you like: <code>%A</code> for the weekday name, <code>%B</code> for the month name, <code>%d</code> for the day, and <code>%Y</code> for the year.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>Integers</strong> are whole numbers; <strong>floats</strong> have decimals.</li>
+      <li>Built-in number functions: <code>abs</code>, <code>round</code>, <code>int</code>, <code>float</code>; the <code>math</code> module adds more.</li>
+      <li><strong>f-strings</strong> format values beautifully: <code>f"{x:,.2f}"</code>.</li>
+      <li>Strings can be concatenated, measured, and transformed with methods.</li>
+      <li><code>datetime</code> handles dates, times, and timespans.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Print the square root of 144 using <code>math.sqrt</code>.</li>
+      <li>Format a price of $1234.5 with a comma and two decimal places.</li>
+      <li>Find how many days there are between today and your birthday.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Two</button>
+    <button class="nav-button" data-nav="next">Chapter Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 6 — CONTROLLING THE ACTION
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-control">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Six</p>
+    <h2>Controlling the Action</h2>
+    <p class="chapter-tagline">Decisions, loops, and the art of repeating yourself without repeating yourself.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Programs do not just run in a straight line. They make choices. They repeat. They skip. That is what makes them interesting.</p>
+
+    <p>To make a choice, use <code>if</code>. Put a condition after it, and indent the code that should run when the condition is true. Add <code>else</code> for the alternative, and <code>elif</code> for more possibilities.</p>
+
+    <pre class="code-example"><code>age = 31
+
+if age < 21:
+    beverage = "milk"
+elif age >= 21 and age < 80:
+    beverage = "beer"
+else:
+    beverage = "prune juice"
+
+print("Have a " + beverage)</code></pre>
+
+    <p>Python also has a neat shorthand called a <strong>ternary expression</strong>: <code>value_if_true if condition else value_if_false</code>. It is like an <code>if</code> that fits on one line.</p>
+
+    <pre class="code-example"><code>sales_tax_rate = 0.065 if taxable else 0</code></pre>
+
+    <p>To repeat something, use a <strong>loop</strong>. A <code>for</code> loop runs a fixed number of times, often over a list or a range. A <code>while</code> loop runs as long as a condition stays true.</p>
+
+    <pre class="code-example"><code>for x in range(5):
+    print(x)          # prints 0, 1, 2, 3, 4
+
+for word in ["The", "rain", "in", "Spain"]:
+    print(word)
+
+count = 0
+while count < 3:
+    print("Round", count)
+    count += 1</code></pre>
+
+    <p>You can stop a loop early with <code>break</code>, or skip to the next round with <code>continue</code>. You can also <strong>nest</strong> loops inside loops. Just watch your indentations — they decide which code belongs to which loop.</p>
+
+    <pre class="code-example"><code>for word in ["First", "Second", "Third"]:
+    print(word)
+    for n in range(1, 4):
+        print(" ", n)</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>if / elif / else</code> lets you choose between alternatives.</li>
+      <li>The <strong>ternary expression</strong> fits a choice into one line.</li>
+      <li><code>for</code> loops repeat a fixed number of times, or over a list.</li>
+      <li><code>while</code> loops repeat until a condition becomes false.</li>
+      <li><code>break</code> exits a loop; <code>continue</code> skips to the next round.</li>
+      <li>Nested loops go inside each other — mind the indentation.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write an <code>if</code> that prints "Good morning" before noon, "Good afternoon" after.</li>
+      <li>Print the even numbers from 0 to 20 using a <code>for</code> loop and <code>continue</code>.</li>
+      <li>What happens if a <code>while</code> loop's condition never changes?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Five</button>
+    <button class="nav-button" data-nav="next">Chapter Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 7 — LISTS, TUPLES, AND SETS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-collections">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Seven</p>
+    <h2>Lists, Tuples, and Sets</h2>
+    <p class="chapter-tagline">When one value is not enough.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>list</strong> is a collection of items, separated by commas, inside square brackets. You can mix any kinds of values. You can reach into the list by position — starting at zero, just like arrays in other languages.</p>
+
+    <pre class="code-example"><code>students = ["Mark", "Amber", "Todd", "Anita", "Sandy"]
+print(students[0])       # → Mark
+print(students[4])       # → Sandy
+print(len(students))     # → 5
+
+for s in students:
+    print(s)</code></pre>
+
+    <p>Lists have superpowers. Use <code>.append()</code> to add to the end, <code>.insert()</code> to add at a position, <code>.remove()</code> to remove a value, <code>.pop()</code> to remove by position, <code>.sort()</code> to alphabetise, <code>.reverse()</code> to flip, and <code>.copy()</code> to duplicate.</p>
+
+    <pre class="code-example"><code>scores = [88, 92, 78, 90, 84]
+scores.sort()
+print(scores)            # → [78, 84, 88, 90, 92]
+
+scores.append(100)
+scores.remove(78)
+print(scores)            # → [84, 88, 90, 92, 100]</code></pre>
+
+    <p>A <strong>tuple</strong> is like a list that cannot be changed. You write it with parentheses instead of square brackets. Tuples are useful when you want to protect data — for instance, a list of fixed prices or a date. You can read from a tuple, loop through it, and check its length, but you cannot modify it.</p>
+
+    <pre class="code-example"><code>prices = (29.95, 9.98, 4.95, 79.98, 2.95)
+print(prices[0])         # → 29.95
+print(len(prices))       # → 5
+# prices[0] = 1.00       # ERROR — tuples are immutable</code></pre>
+
+    <p>A <strong>set</strong> is a collection with no fixed order, written with curly braces. Sets never contain duplicates. You can add to a set with <code>.add()</code> and combine with <code>.update()</code>. Sets are useful when you care about <em>which</em> items you have, not <em>in what order</em>.</p>
+
+    <pre class="code-example"><code>sample_set = {1.98, 98.9, 74.95, 2.5, 1, 16.3}
+sample_set.add(11.23)
+print(len(sample_set))</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>Lists</strong> are ordered, changeable collections written with <code>[ ]</code>.</li>
+      <li>Indexes start at 0. The last index is <code>len - 1</code>.</li>
+      <li>List methods: <code>append</code>, <code>insert</code>, <code>remove</code>, <code>pop</code>, <code>sort</code>, <code>reverse</code>, <code>copy</code>.</li>
+      <li><strong>Tuples</strong> are immutable — you cannot change them.</li>
+      <li><strong>Sets</strong> have no order, no duplicates, and use curly braces.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Make a list of your five favourite foods and print the third one.</li>
+      <li>Sort the list and print it. Then reverse it and print it.</li>
+      <li>Make a tuple of the twelve months. Why can't you add a thirteenth?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Six</button>
+    <button class="nav-button" data-nav="next">Chapter Eight →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 8 — WRANGLING BIGGER CHUNKS OF CODE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-functions">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Eight</p>
+    <h2>Wrangling Bigger Chunks of Code</h2>
+    <p class="chapter-tagline">Functions — write it once, use it forever.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>function</strong> is a little machine with a name. You put something in, and something comes out. You define it once with the word <code>def</code>, and then you <em>call</em> it whenever you need it. This keeps your programs short, clear, and easy to fix.</p>
+
+    <pre class="code-example"><code>def hello():
+    print("Hello")
+
+hello()</code></pre>
+
+    <p>Functions can take <strong>parameters</strong> — slots where you drop values in. And they can <code>return</code> a result. The values you pass in are called <strong>arguments</strong>. Inside the function, the parameters are like local variables; they only exist while the function is running.</p>
+
+    <pre class="code-example"><code>def greet(name):
+    return "Hello, " + name + "!"
+
+print(greet("Ada"))
+print(greet("Pip"))</code></pre>
+
+    <p>You can give a parameter a default value. That makes it optional.</p>
+
+    <pre class="code-example"><code>def greet(name, greeting="Hello"):
+    return greeting + ", " + name + "!"
+
+print(greet("Ada"))
+print(greet("Ada", "Howdy"))</code></pre>
+
+    <p>You can also pass arguments by <strong>keyword</strong>, using the parameter name. That makes your code self-explanatory.</p>
+
+    <pre class="code-example"><code>greet(greeting="Hola", name="Ada")</code></pre>
+
+    <p>If you do not know how many arguments you will receive, use <code>*args</code>. It collects them all into a tuple.</p>
+
+    <pre class="code-example"><code>def sorter(*args):
+    newlist = list(args)
+    newlist.sort()
+    print(newlist)
+
+sorter(3, 1, 4, 1, 5, 9)</code></pre>
+
+    <p>Functions also have their own <strong>scope</strong>. Variables created inside a function are private to that function. That is a good thing — you do not have to worry about one function accidentally overwriting another's variables.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Functions are created with <code>def</code> and called by name.</li>
+      <li><strong>Parameters</strong> are slots; <strong>arguments</strong> are the values you pass.</li>
+      <li><code>return</code> sends a result back to the caller.</li>
+      <li>Default values make parameters optional.</li>
+      <li><strong>Keyword arguments</strong> let you pass values by name.</li>
+      <li><code>*args</code> collects any number of arguments into a tuple.</li>
+      <li>Variables inside a function have <strong>local scope</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a function called <code>double</code> that returns twice its argument.</li>
+      <li>Write a function called <code>greet</code> with a default greeting.</li>
+      <li>Write a function that sorts any number of arguments.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Seven</button>
+    <button class="nav-button" data-nav="next">Chapter Nine →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 9 — SIDESTEPPING ERRORS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-errors">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Nine</p>
+    <h2>Sidestepping Errors</h2>
+    <p class="chapter-tagline">How to catch a problem before it crashes your app.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Sometimes programs run into trouble that is not their fault. A file is missing. A user types something impossible. A resource cannot be reached. These problems are called <strong>exceptions</strong>, and Python has a graceful way to handle them.</p>
+
+    <p>Wrap the risky code in <code>try</code>. Catch the error with <code>except</code>. Optionally run some code when nothing goes wrong with <code>else</code>. And use <code>finally</code> to run code no matter what happened.</p>
+
+    <pre class="code-example"><code>try:
+    the_file = open("people.csv")
+    print(the_file.name)
+except FileNotFoundError:
+    print("Sorry, I don't see a file named people.csv here.")
+except Exception as err:
+    print("Something else went wrong:", err)
+else:
+    print("File opened successfully!")
+finally:
+    print("This runs no matter what.")</code></pre>
+
+    <p>Notice that we can have several <code>except</code> blocks. Python checks them in order. If the error matches the first one, that block runs. If it does not match, Python checks the next. A final <code>except Exception</code> catches anything left over.</p>
+
+    <p>You can also <strong>raise</strong> your own exceptions when your code detects a problem. Use the word <code>raise</code> followed by an error class.</p>
+
+    <pre class="code-example"><code>def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero!")
+    return a / b</code></pre>
+
+    <p>Good error handling makes your program <em>friendly</em>. Instead of crashing with a scary message, it says something a human can understand, and it keeps going.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>try / except</code> catches errors so your program keeps running.</li>
+      <li>Match specific exceptions like <code>FileNotFoundError</code> for clarity.</li>
+      <li><code>else</code> runs when no error occurs; <code>finally</code> always runs.</li>
+      <li><code>raise</code> creates your own errors deliberately.</li>
+      <li>Graceful errors make programs friendlier.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a <code>try / except</code> around a file open.</li>
+      <li>Add an <code>else</code> block that runs only when the file opens.</li>
+      <li>Write a function that raises <code>ValueError</code> for negative numbers.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eight</button>
+    <button class="nav-button" data-nav="next">Chapter Ten →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 10 — WORKING WITH EXTERNAL FILES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-files">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Ten</p>
+    <h2>Working with External Files</h2>
+    <p class="chapter-tagline">Reading, writing, and copying files on your computer.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Files come in two big families: <strong>text files</strong> (like <code>.txt</code> and <code>.csv</code>) which you can read with your eyes, and <strong>binary files</strong> (like images and videos) which only the computer can interpret.</p>
+
+    <p>To open a file, use the <code>open()</code> function. The recommended style is to use <code>with</code>, which automatically closes the file when you are done.</p>
+
+    <pre class="code-example"><code>with open("quotes.txt") as f:
+    content = f.read()
+    print(content)</code></pre>
+
+    <p>You can read a file in three ways. <code>.read()</code> reads the whole thing at once. <code>.readlines()</code> reads every line into a list. <code>.readline()</code> reads just one line at a time, which is safer for very large files.</p>
+
+    <pre class="code-example"><code>with open("quotes.txt") as f:
+    for one_line in f.readlines():
+        print(one_line)</code></pre>
+
+    <p>To <strong>write</strong> a file, open it in <code>"w"</code> mode. Be careful — writing overwrites whatever was there before. To add to the end instead, use <code>"a"</code> mode for append.</p>
+
+    <pre class="code-example"><code>with open("notes.txt", "w") as f:
+    f.write("Hello, file!\n")
+
+with open("notes.txt", "a") as f:
+    f.write("Another line.\n")</code></pre>
+
+    <p>To copy a binary file, read it in small chunks and write them out. That way you never load the whole file into memory at once, which is important for big images or videos.</p>
+
+    <pre class="code-example"><code>with open("photo.jpg", "rb") as source:
+    with open("photo_copy.jpg", "wb") as dest:
+        chunk = source.read(1024)
+        while chunk:
+            dest.write(chunk)
+            chunk = source.read(1024)</code></pre>
+
+    <p>Files are how programs talk to the outside world. Once you can read and write them, you can build anything from a to-do list to a database.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Text files are human-readable; binary files are not.</li>
+      <li>Use <code>with open(...)</code> to open files safely.</li>
+      <li><code>read</code>, <code>readline</code>, and <code>readlines</code> read in different ways.</li>
+      <li><code>"w"</code> overwrites; <code>"a"</code> appends; <code>"r"</code> reads.</li>
+      <li>Copy binary files in chunks.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a text file with three lines.</li>
+      <li>Open it and loop through it, printing each line.</li>
+      <li>Copy an image using chunked reads.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Nine</button>
+    <button class="nav-button" data-nav="next">Enter Part Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART THREE DIVIDER — MASTERS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-three" id="part-three">
+  <div class="cover-content">
+    <p class="part-number">Part Three</p>
+    <h1>Masters</h1>
+    <p class="part-desc">The final gate. Juggle JSON, talk to the internet, use libraries, and meet the essential ideas of Python.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Eleven →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 11 — JUGGLING JSON DATA
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-json">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Eleven</p>
+    <h2>Juggling JSON Data</h2>
+    <p class="chapter-tagline">How the web packs up its data.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><strong>JSON</strong> stands for JavaScript Object Notation. Despite the name, it is used everywhere — in every language, on every platform. It is a text format for storing structured data, and it looks almost exactly like a Python dictionary.</p>
+
+    <pre class="code-example"><code>{
+  "book_title": "Python Essentials For Dummies",
+  "book_author": "John C. Shovic and Alan Simpson",
+  "isbn": "9781394263479"
+}</code></pre>
+
+    <p>Python's standard library includes a <code>json</code> module. It has two important pairs of methods. <code>json.load()</code> reads from a file; <code>json.loads()</code> reads from a string. <code>json.dump()</code> writes to a file; <code>json.dumps()</code> writes to a string.</p>
+
+    <pre class="code-example"><code>import json
+
+with open("people.json", "r") as f:
+    people = json.load(f)
+
+for person in people:
+    print(person["Full Name"], person["Birth Year"])</code></pre>
+
+    <p>To go the other way — from a Python dictionary to a JSON string — use <code>json.dumps()</code> with <code>indent=2</code> to make it readable.</p>
+
+    <pre class="code-example"><code>data = {"name": "Ada", "age": 12}
+text = json.dumps(data, indent=2)
+print(text)</code></pre>
+
+    <p>JSON is called a <strong>marshalling format</strong> — a way of packing data so it can travel between computers. It is used by databases, web services, and every app that talks to the internet.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>JSON is a text format for structured data.</li>
+      <li>It looks like a Python dictionary or list.</li>
+      <li><code>json.load</code> and <code>json.loads</code> deserialize; <code>json.dump</code> and <code>json.dumps</code> serialize.</li>
+      <li><code>indent=2</code> makes JSON readable.</li>
+      <li>JSON is the language of the web.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a Python dictionary and convert it to a JSON string.</li>
+      <li>Load a JSON file and print one field from each entry.</li>
+      <li>What is the difference between <code>load</code> and <code>loads</code>?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Three</button>
+    <button class="nav-button" data-nav="next">Chapter Twelve →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 12 — INTERACTING WITH THE INTERNET
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-internet">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Twelve</p>
+    <h2>Interacting with the Internet</h2>
+    <p class="chapter-tagline">How programs talk to the wider world.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The web runs on a conversation. Your browser asks for something — a page, an image, a piece of data — and a server somewhere answers. The rules of that conversation are called <strong>HTTP</strong>. Python can join in.</p>
+
+    <p>The <code>urllib</code> library lets you open web pages from Python. The <code>request</code> module is the part you will use most.</p>
+
+    <pre class="code-example"><code>from urllib import request
+
+response = request.urlopen("https://example.com")
+print(response.code)   # → 200</code></pre>
+
+    <p>That <code>200</code> is an HTTP <strong>status code</strong> — it means "OK". Other common ones: <code>404</code> means "not found", <code>403</code> means "forbidden", <code>500</code> means "server error".</p>
+
+    <p>A URL has several parts. <code>https://</code> is the protocol. <code>example.com</code> is the domain. <code>/search</code> is the path. <code>?q=python</code> is a query string — one or more <code>name=value</code> pairs after a question mark.</p>
+
+    <p>Sometimes a page will not let Python read it. That is often because the server wants a real browser. But if a site offers an <strong>API</strong> — an Application Programming Interface — you can ask politely using the rules the API describes.</p>
+
+    <p>For pages that do allow it, you can use <strong>web scraping</strong>. With the <code>BeautifulSoup</code> library, Python can pull out specific pieces of data from a web page — titles, links, prices, table rows.</p>
+
+    <pre class="code-example"><code>from urllib import request
+from bs4 import BeautifulSoup
+
+page = request.urlopen("https://example.com").read()
+soup = BeautifulSoup(page, "html5lib")
+
+for link in soup.find_all("a"):
+    print(link.get("href"), link.text)</code></pre>
+
+    <p>Scraping is powerful, but respect the rules. Many sites forbid it in their terms of service. Always read the rules and play fair.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>HTTP</strong> is the protocol the web uses to move data.</li>
+      <li>Status codes: 200 OK, 404 not found, 403 forbidden, 500 server error.</li>
+      <li>A URL has a protocol, domain, path, and optional query string.</li>
+      <li>Use <code>urllib.request.urlopen</code> to fetch a page.</li>
+      <li>Use <code>BeautifulSoup</code> to scrape content.</li>
+      <li>Respect each site's rules.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Fetch a page with <code>urlopen</code> and print its status code.</li>
+      <li>What does 404 mean? What about 500?</li>
+      <li>Try installing <code>beautifulsoup4</code> with <code>pip</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eleven</button>
+    <button class="nav-button" data-nav="next">Chapter Thirteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 13 — LIBRARIES, PACKAGES, AND MODULES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-libraries">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Thirteen</p>
+    <h2>Libraries, Packages, and Modules</h2>
+    <p class="chapter-tagline">You are not alone — a whole community is here to help.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Python comes with a huge collection of prewritten code called the <strong>standard library</strong>. It contains modules for maths, dates, files, JSON, the internet, and much, much more. But that is just the beginning. Beyond the standard library there are tens of thousands of <strong>packages</strong> you can download — for science, for AI, for art, for games.</p>
+
+    <p>Here is the vocabulary. A <strong>library</strong> is the biggest collection. A <strong>package</strong> is one box inside the library. A <strong>module</strong> is one drawer inside a package. A module contains functions, classes, and data that you can borrow.</p>
+
+    <p>To use a module, you <code>import</code> it. You can import the whole thing, or just the parts you need.</p>
+
+    <pre class="code-example"><code>import math
+print(math.sqrt(81))     # → 9.0
+
+from math import pi, sqrt
+print(sqrt(pi))          # → 1.7724538509055159</code></pre>
+
+    <p>You can also give a module a short alias, which is useful for long module names.</p>
+
+    <pre class="code-example"><code>import datetime as dt
+print(dt.date.today())</code></pre>
+
+    <p>The <code>dir()</code> function lists everything inside a module. The <code>help()</code> function explains what each thing does. And <code>pip</code> — short for "Pip Installs Packages" — is the tool that fetches new packages from <strong>PyPI</strong>, the Python Package Index.</p>
+
+    <pre class="code-example"><code>pip install beautifulsoup4
+pip list
+pip --version</code></pre>
+
+    <p>The Python community is one of the friendliest in programming. Whatever you want to build, someone has probably already built a package that will help.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The <strong>standard library</strong> comes with Python and is always available.</li>
+      <li>A <strong>library</strong> contains packages; a package contains modules.</li>
+      <li><code>import</code> brings a module into your code.</li>
+      <li><code>from ... import ...</code> brings specific parts only.</li>
+      <li><code>dir()</code> and <code>help()</code> explore what a module offers.</li>
+      <li><code>pip</code> installs packages from <strong>PyPI</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Import the <code>math</code> module and use <code>dir(math)</code> to see what it contains.</li>
+      <li>Use <code>from math import pi</code> and then <code>print(pi)</code>.</li>
+      <li>Install a package with <code>pip install</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twelve</button>
+    <button class="nav-button" data-nav="next">Chapter Fourteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 14 — THE TEN MOST ESSENTIAL ASPECTS OF PYTHON
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-essential">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Fourteen</p>
+    <h2>The Ten Most Essential Aspects of Python</h2>
+    <p class="chapter-tagline">The ideas that make you a Python programmer.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>You have come a long way. Here are the ten ideas that matter most, the ones that will keep guiding you as you build bigger and bigger programs.</p>
+
+    <p><strong>1. Be Pythonic.</strong> Write code that is beautiful, explicit, simple, and readable. The Zen of Python is not a joke — it is a way of life.</p>
+
+    <p><strong>2. Indentation matters.</strong> Python uses spaces to mark blocks. Get into the habit of using spaces instead of tabs, and keep your indentation consistent.</p>
+
+    <p><strong>3. Understand the syntax.</strong> Once you know how Python statements look — assignments, function calls, loops, conditions — the rest of the language opens up naturally.</p>
+
+    <p><strong>4. Variables are flexible.</strong> Python is <em>dynamically typed</em>, which means a variable can hold any kind of value. But that does not mean you can add a number to a string — mind your types.</p>
+
+    <p><strong>5. Lists are your friend.</strong> Lists are the most important compound data type in Python. They are how you store, sort, search, and loop through collections of items.</p>
+
+    <p><strong>6. Control the flow.</strong> Use <code>if</code>, <code>for</code>, and <code>while</code> to decide what your program does, how many times it does it, and when it should stop.</p>
+
+    <p><strong>7. Organise with functions.</strong> Any time you find yourself copying and pasting the same code, put it in a function. Your future self will thank you.</p>
+
+    <p><strong>8. Handle errors gracefully.</strong> Use <code>try / except</code> to catch problems and show friendly messages. Exception handling is the difference between a program that crashes and one that keeps going.</p>
+
+    <p><strong>9. Use other people's modules.</strong> The Python community is huge. Whatever you need — matrix math, image processing, machine learning, robotics — someone has already built it and shared it for free.</p>
+
+    <p><strong>10. Use the web and AI when you get stuck.</strong> Search engines, documentation, Stack Overflow, and AI assistants like ChatGPT and Copilot are all there to help. You are not being replaced by AI — you are getting more productive with it.</p>
+
+    <p>You have finished the book. But you have not finished learning. Programming is a craft, and crafts are built through practice. Keep writing Python. Keep breaking it. Keep fixing it. The more you build, the more fluent you become.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Be Pythonic: readable, explicit, simple.</li>
+      <li>Indentation and syntax are the foundations.</li>
+      <li>Variables are flexible; lists are essential.</li>
+      <li>Control flow, functions, and error handling make programs real.</li>
+      <li>Libraries, the web, and AI are your partners.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Pick one of the ten and write a small program that uses it.</li>
+      <li>Pick a package from PyPI and try it out.</li>
+      <li>What is one piece of code you would like to write next?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirteen</button>
+    <button class="nav-button" data-nav="next">The Little Dictionary →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOSSARY
+     ============================================================ -->
+<section class="book-page chapter-page" id="glossary">
+  <div class="chapter-header">
+    <p class="chapter-part">After the Journey</p>
+    <h2>The Little Dictionary</h2>
+    <p class="chapter-tagline">Every new word you met along the way.</p>
+  </div>
+
+  <dl class="glossary-list">
+    <dt>API</dt>
+    <dd>Application Programming Interface — a set of rules for one program to talk to another.</dd>
+
+    <dt>Argument</dt>
+    <dd>A value you pass to a function when you call it.</dd>
+
+    <dt>Binary file</dt>
+    <dd>A file stored as bytes, not human-readable text: images, audio, video.</dd>
+
+    <dt>Boolean</dt>
+    <dd>A value that is either <code>True</code> or <code>False</code>.</dd>
+
+    <dt>Bug</dt>
+    <dd>A mistake in a program that makes it do something wrong.</dd>
+
+    <dt>Class</dt>
+    <dd>A blueprint for creating objects.</dd>
+
+    <dt>Comment</dt>
+    <dd>A note in the code that the computer ignores. Starts with <code>#</code> or is wrapped in triple quotes.</dd>
+
+    <dt>Concatenation</dt>
+    <dd>Joining two strings together, usually with <code>+</code>.</dd>
+
+    <dt>Data type</dt>
+    <dd>The kind of value a variable holds: integer, float, string, boolean.</dd>
+
+    <dt>Debugging</dt>
+    <dd>The art of finding and fixing bugs.</dd>
+
+    <dt>Deserialization</dt>
+    <dd>Turning a string or file back into an object.</dd>
+
+    <dt>Dictionary</dt>
+    <dd>A collection of <code>key: value</code> pairs.</dd>
+
+    <dt>Docstring</dt>
+    <dd>A triple-quoted comment at the start of a module, function, or class.</dd>
+
+    <dt>Exception</dt>
+    <dd>An error that happens while a program is running.</dd>
+
+    <dt>f-string</dt>
+    <dd>A string literal starting with <code>f</code> that lets you insert expressions inside curly braces.</dd>
+
+    <dt>Float</dt>
+    <dd>A number with a decimal point.</dd>
+
+    <dt>Function</dt>
+    <dd>A named, reusable block of code that can take arguments and return a value.</dd>
+
+    <dt>Immutable</dt>
+    <dd>Cannot be changed. Tuples and strings are immutable.</dd>
+
+    <dt>Indentation</dt>
+    <dd>The spaces at the start of a line that mark a block of code in Python.</dd>
+
+    <dt>Integer</dt>
+    <dd>A whole number, positive or negative.</dd>
+
+    <dt>Interpreter</dt>
+    <dd>The program that reads and runs your Python code.</dd>
+
+    <dt>JSON</dt>
+    <dd>JavaScript Object Notation — a text format for structured data.</dd>
+
+    <dt>Keyword</dt>
+    <dd>A word with special meaning in Python, like <code>if</code>, <code>for</code>, or <code>def</code>.</dd>
+
+    <dt>Library</dt>
+    <dd>A collection of packages and modules.</dd>
+
+    <dt>List</dt>
+    <dd>An ordered, changeable collection of items, written with square brackets.</dd>
+
+    <dt>Loop</dt>
+    <dd>A construct that repeats a block of code until a condition is met.</dd>
+
+    <dt>Method</dt>
+    <dd>A function that belongs to an object.</dd>
+
+    <dt>Module</dt>
+    <dd>A file of prewritten Python code that you can import.</dd>
+
+    <dt>Object</dt>
+    <dd>A bundle of data and actions with a type.</dd>
+
+    <dt>Object-oriented</dt>
+    <dd>A style of programming that organises code around objects.</dd>
+
+    <dt>Package</dt>
+    <dd>A collection of modules distributed together.</dd>
+
+    <dt>Parameter</dt>
+    <dd>A named slot in a function definition for receiving an argument.</dd>
+
+    <dt>pip</dt>
+    <dd>The Python package installer. <code>pip install</code> fetches packages from PyPI.</dd>
+
+    <dt>PyPI</dt>
+    <dd>The Python Package Index — the internet's treasure chest of Python packages.</dd>
+
+    <dt>Scope</dt>
+    <dd>The part of a program where a variable is visible.</dd>
+
+    <dt>Serialization</dt>
+    <dd>Turning an object into a string or file for storage or transmission.</dd>
+
+    <dt>Set</dt>
+    <dd>An unordered, duplicate-free collection, written with curly braces.</dd>
+
+    <dt>String</dt>
+    <dd>A piece of text, written between quotes.</dd>
+
+    <dt>Syntax</dt>
+    <dd>The rules of spelling and grammar that a programming language follows.</dd>
+
+    <dt>Ternary expression</dt>
+    <dd>A one-line <code>if / else</code>: <code>a if cond else b</code>.</dd>
+
+    <dt>Tuple</dt>
+    <dd>An ordered, unchangeable collection, written with parentheses.</dd>
+
+    <dt>Variable</dt>
+    <dd>A name tag for a value.</dd>
+
+    <dt>Zen of Python</dt>
+    <dd>A hidden poem describing the philosophy of the language. Type <code>import this</code> to read it.</dd>
+  </dl>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fourteen</button>
+    <button class="nav-button" data-nav="next">A Note for Grown-Ups →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BACK COVER
+     ============================================================ -->
+<section class="book-page cover-page back-cover" id="back">
+  <div class="cover-content">
+    <p class="cover-series">The Journey Ends — and Begins</p>
+    <h1>You Are a Programmer Now</h1>
+    <p class="cover-subtitle">Not because you finished a book — but because you started making things.</p>
+    <p class="closing-line">Keep building. Keep breaking. Keep learning.</p>
+
+    <div class="cover-note" style="max-width: 460px; margin-top: 30px;">
+      This little book was refactored from <em>Python Essentials For Dummies</em>
+      by John C. Shovic and Alan Simpson, with deep gratitude for its clear thinking
+      and generous spirit. All mistakes in the retelling are my own.
+    </div>
+
+    <div class="cover-credit">
+      Adapted &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+
+    <div class="book-nav" style="border-top: none; margin-top: 24px;">
+      <button class="nav-button" data-nav="first">↺ Begin Again</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
