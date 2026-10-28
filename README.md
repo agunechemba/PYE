@@ -57,6 +57,4 @@ Adapted and illustrated by **[Agunechemba Ekene](https://agunechemba.name.ng)**.
 
 ---
 
-# [READ BOOK](https://agunechemba.name.ng/PYE/)
-
 *Keep building. Keep breaking. Keep learning.*
